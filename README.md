@@ -30,4 +30,12 @@ docker logs -t <container_id_here>
 - Enter node name (anything)
 - Enter your node address (you got it from installation before)
 - Click Setup my node & Confirm transaction
-- 
+
+- Now you can see that the node is **online**, if not please restart the node by running this command:
+```bash
+sudo docker run  -d   -v "/privasea/config:/app/config" \
+  -e KEYSTORE_PASSWORD=123456 \
+  privasea/acceleration-node-beta:latest
+```
+- **Change 123456 with your KEYSTORE PASSWORD**
+- After that, click Details and Stake TPRAI token
