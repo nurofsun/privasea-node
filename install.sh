@@ -81,14 +81,12 @@ start_node() {
 }
 
 # Main script execution
-if command -v docker &> /dev/null; then
-    if ! is_docker_installed; then
-        install_docker
-    fi
+if ! is_docker_installed; then
+    install_docker
+fi
     pull_docker_image
     create_keystore
     rename_keystore
     start_node
 else
     echo -e "\033[1;31mIt Seems you're not using Ubuntu Distro, yes? so stfu!\033[0m"
-fi  
