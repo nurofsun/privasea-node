@@ -84,7 +84,7 @@ start_node() {
 if ! is_docker_installed; then
     install_docker
 fi
-    pull_docker_image
-    create_keystore
-    rename_keystore
-    start_node
+pull_docker_image
+create_keystore
+rename_keystore
+start_node
