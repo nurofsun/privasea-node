@@ -39,6 +39,7 @@ install_docker() {
 
 # Function to pull the Docker image
 pull_docker_image() {
+    mkdir -p /privasea/config/
     echo -e "\033[1;34mPulling the Docker image...\033[0m"
     sudo docker pull privasea/acceleration-node-beta:latest
     echo -e "\033[1;32mDocker image pulled successfully.\033[0m"
