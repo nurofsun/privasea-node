@@ -83,9 +83,8 @@ start_node() {
 # Main script execution
 if ! is_docker_installed; then
     install_docker
-else
+fi
     pull_docker_image
     create_keystore
     rename_keystore
     start_node
-fi
