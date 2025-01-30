@@ -73,7 +73,6 @@ rename_keystore() {
 # Function to start the node
 start_node() {
     echo -e "\033[1;34mStarting the node...\033[0m"
-    cd /privasea/
     sudo docker run -d \
         -v "/privasea/config:/app/config" \
         -e KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD \
