@@ -73,6 +73,7 @@ rename_keystore() {
 
 # Function to start the node
 start_node() {
+    cd /privasea/
     echo -e "\033[1;34mStarting the node...\033[0m"
     sudo docker run -d \
         -v "/privasea/config:/app/config" \
